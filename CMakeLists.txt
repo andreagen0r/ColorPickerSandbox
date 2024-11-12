@@ -11,11 +11,11 @@ find_package(Qt6 6.8 REQUIRED COMPONENTS Quick )
 
 qt_standard_project_setup(REQUIRES 6.8)
 
-qt_add_executable(Sandbox
+qt_add_executable(sandbox
     main.cpp
 )
 
-qt_add_qml_module(Sandbox
+qt_add_qml_module(sandbox
     URI Sandbox
     VERSION 1.0
     QML_FILES
@@ -25,7 +25,7 @@ qt_add_qml_module(Sandbox
 add_subdirectory(Origin)
 add_subdirectory(ColorPicker)
 
-set_target_properties(Sandbox PROPERTIES
+set_target_properties(sandbox PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER com.sandbox.colorPicker
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -33,7 +33,7 @@ set_target_properties(Sandbox PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(Sandbox
+target_link_libraries(sandbox
     PRIVATE
     Qt6::Quick
     Origin
@@ -41,7 +41,7 @@ target_link_libraries(Sandbox
 )
 
 include(GNUInstallDirs)
-install(TARGETS Sandbox
+install(TARGETS sandbox
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
