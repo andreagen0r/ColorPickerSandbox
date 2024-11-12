@@ -1,8 +1,8 @@
 import QtQuick
 import QtQuick.Controls
 
-import ColorPicker
-import Origin
+import Origin.ColorPicker
+import Origin.Controls
 
 ApplicationWindow {
   width: 1920
