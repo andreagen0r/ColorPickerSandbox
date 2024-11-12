@@ -25,6 +25,8 @@ qt_add_qml_module(sandbox
 add_subdirectory(Origin)
 add_subdirectory(ColorPicker)
 
+set(QML_IMPORT_PATH "${CMAKE_CURRENT_BINARY_DIR}/Origin; ${CMAKE_CURRENT_BINARY_DIR}/ColorPicker" CACHE STRING "Import paths for Qt Creator's code model" FORCE)
+
 set_target_properties(sandbox PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER com.sandbox.colorPicker
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
