@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 
-import Origin.ColorPicker
+import ColorPicker
 import Origin.Controls
 
 ApplicationWindow {
