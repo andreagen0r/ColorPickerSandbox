@@ -37,7 +37,7 @@ target_link_libraries(sandbox
     PRIVATE
     Qt6::Quick
     Originplugin
-    ColorPickerModuleplugin
+    ColorPickerplugin
 )
 
 include(GNUInstallDirs)
