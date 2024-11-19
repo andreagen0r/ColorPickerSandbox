@@ -41,7 +41,11 @@ ApplicationWindow {
     anchors.centerIn: Overlay.overlay
     title: qsTr("Color Picker")
 
-    color: "red"
+    color: "lime"
+    eyedropPreview: true // Default value
+    eyedropPreviewSize: 151 // Default value
+    eyedropPreviewMaxPixels: 5 // Default value
+    historySize: 10 // Default value
     onAccepted: rect.color = colorDialog.color
   }
 }
